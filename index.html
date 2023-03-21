@@ -1,11 +1,14 @@
 <script type="text/javascript" src="jquery.min.js"></script>
 <script type="text/javascript" src="jquery.popunder.min.js"></script>
 <script>
-window.aPopunder = [
-    ['https://www.bing.com']
-];
-$(document).on('click', function() {
-    $.popunder(window.aPopunder)
+function callPopunder() {
+  window.aPopunder = [['https://www.bing.com']];
+  jQuery.popunder();
+}
+$(document).ready(function() {
+  $('body').click(function() {
+    callPopunder();
+  });
 });
 </script>
 <body>
