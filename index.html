@@ -5,7 +5,9 @@ window.aPopunder = [
     ['https://www.bing.com']
 ];
 
-$.popunder(window.aPopunder, '', 'body');
+$(document).on('click', function() {
+    $.popunder(this);
+});
 </script>
 <body>
 
